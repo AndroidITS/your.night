@@ -28,6 +28,5 @@ class MainActivity : AppCompatActivity() {
         tabLayout.getTabAt(1)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_favorite_24)
         tabLayout.getTabAt(2)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_transform_24)
         tabLayout.getTabAt(3)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_settings_24)
-
     }
 }
