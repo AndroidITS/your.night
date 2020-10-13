@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_random.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,8 +45,11 @@ class RandomFragment : Fragment() {
 
             val possibility = RandomList()
             container!!.add(possibility)
-
             recipeAdapter!!.notifyDataSetChanged()
+        }
+
+        randomButton.setOnClickListener{
+            onRandomClick()
         }
     }
 
@@ -75,4 +80,31 @@ class RandomFragment : Fragment() {
                 }
             }
     }
+
+    fun onRandomClick() {
+
+        if(addText.length() > 0 && addText2.length() > 0) {
+            var numRandom = 2 + container!!.size
+            var min = 1
+            var max = numRandom
+            var random: Int = Random().nextInt(max - min + 1) + min
+            Log.d("Random:", random.toString())
+            if(random == 1) {
+                resultRandom.text = addText.text.toString()
+            } else if (random == 2) {
+                resultRandom.text = addText2.text.toString()
+            } else {
+                resultRandom.text = container!![random - 3].toString()
+            }
+        }
+    }
 }
+
+/*
+TODO:
+    - rimuovere il titoletto nel page adapter?
+    - scroll view nel random fragment
+    - sistemare home page
+    - random fragment non riusciamo a stampare il nome effettivo
+    - rimuovere il nome in alto nell'app
+ */
