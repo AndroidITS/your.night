@@ -23,7 +23,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class RandomFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private var container: ArrayList<RandomList>? = null
+    private var container: ArrayList<String>? = null
     private var recipeAdapter: RandomListAdapter? = null
     private var layoutManager: LinearLayoutManager? = null
 
@@ -43,7 +43,7 @@ class RandomFragment : Fragment() {
 
         addElementRandomButton.setOnClickListener{
 
-            val possibility = RandomList()
+            val possibility = ""
             container!!.add(possibility)
             recipeAdapter!!.notifyDataSetChanged()
         }
@@ -83,20 +83,20 @@ class RandomFragment : Fragment() {
 
     fun onRandomClick() {
 
-        if(addText.length() > 0 && addText2.length() > 0) {
+
             var numRandom = 2 + container!!.size
             var min = 1
             var max = numRandom
             var random: Int = Random().nextInt(max - min + 1) + min
-            Log.d("Random:", random.toString())
             if(random == 1) {
                 resultRandom.text = addText.text.toString()
             } else if (random == 2) {
                 resultRandom.text = addText2.text.toString()
             } else {
-                resultRandom.text = container!![random - 3].toString()
+                resultRandom.text = container!![random - 3]
             }
-        }
+        Log.d("Dimensione array:", container!!.size.toString())
+
     }
 }
 
@@ -104,7 +104,7 @@ class RandomFragment : Fragment() {
 TODO:
     - rimuovere il titoletto nel page adapter?
     - scroll view nel random fragment
-    - sistemare home page
     - random fragment non riusciamo a stampare il nome effettivo
-    - rimuovere il nome in alto nell'app
+
+    quando aggiungiamo un nuovo elemento e l'utente inizia a digitare, con l'evento changeEventListener
  */

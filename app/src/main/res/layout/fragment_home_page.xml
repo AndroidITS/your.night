@@ -92,7 +92,6 @@
     </LinearLayout>
 
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -100,65 +99,5 @@
         android:orientation="vertical"
        app:layout_constraintGuide_percent="0.5" />
 
-    <!--
-
-     <com.google.android.material.button.MaterialButton
-         android:id="@+id/categoriaButton2"
-         android:layout_width="0dp"
-         android:layout_height="0dp"
-         android:layout_marginStart="20dp"
-         android:layout_marginTop="20dp"
-         android:layout_marginEnd="20dp"
-         app:layout_constraintBottom_toTopOf="@+id/categoriaButton4"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="@+id/guideline"
-         app:layout_constraintTop_toBottomOf="@+id/searchBar" />
-
-     <com.google.android.material.button.MaterialButton
-         android:id="@+id/categoriaButton3"
-         android:layout_width="0dp"
-         android:layout_height="150dp"
-         android:layout_marginStart="20dp"
-         android:layout_marginEnd="20dp"
-         android:layout_marginBottom="8dp"
-         app:layout_constraintBottom_toTopOf="@+id/categoriaButton5"
-         app:layout_constraintEnd_toStartOf="@+id/guideline"
-         app:layout_constraintHorizontal_bias="0.0"
-         app:layout_constraintStart_toStartOf="parent" />
-
-     <com.google.android.material.button.MaterialButton
-         android:id="@+id/categoriaButton5"
-         android:layout_width="0dp"
-         android:layout_height="150dp"
-         android:layout_marginStart="20dp"
-         android:layout_marginEnd="20dp"
-         app:layout_constraintEnd_toStartOf="@+id/guideline"
-         app:layout_constraintHorizontal_bias="1.0"
-         app:layout_constraintStart_toStartOf="parent"
-         tools:layout_editor_absoluteY="679dp" />
-
-     <com.google.android.material.button.MaterialButton
-         android:id="@+id/categoriaButton6"
-         android:layout_width="0dp"
-         android:layout_height="150dp"
-         android:layout_marginStart="20dp"
-         android:layout_marginEnd="20dp"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="0.0"
-         app:layout_constraintStart_toStartOf="@+id/guideline"
-         tools:layout_editor_absoluteY="515dp" />
-
-     <com.google.android.material.button.MaterialButton
-         android:id="@+id/categoriaButton4"
-         android:layout_width="0dp"
-         android:layout_height="150dp"
-         android:layout_marginStart="20dp"
-         android:layout_marginEnd="20dp"
-         android:layout_marginBottom="20dp"
-         app:layout_constraintBottom_toTopOf="@+id/categoriaButton6"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="0.0"
-         app:layout_constraintStart_toStartOf="@+id/guideline" />
- -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
