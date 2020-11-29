@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_create_account.*
@@ -24,7 +25,7 @@ class CreateAccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
-
+        FirebaseFirestore.setLoggingEnabled(true)
         auth = Firebase.auth
 
         registerButton.setOnClickListener {
@@ -49,13 +50,14 @@ class CreateAccountActivity : AppCompatActivity() {
                                 )
                                 // Add a new document with a generated ID
                                 db.collection("users")
-                                    .add(user)
+                                    .document(auth.currentUser!!.uid)
+                                    .set(user)
                                     .addOnSuccessListener { documentReference ->
-                                        Log.d("db", "DocumentSnapshot added with ID: ${documentReference.id}")
+                                        Log.d("testFireStore", "DocumentSnapshot added with ID")
                                         openLoginActivity()
                                     }
                                     .addOnFailureListener { e ->
-                                        Log.w("db", "Error adding document", e)
+                                        Log.w("testFireStore", "Error adding document", e)
                                     }
                             } else {
                                 // If sign in fails, display a message to the user.

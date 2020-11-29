@@ -38,11 +38,38 @@
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp" >
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/categoriaButton1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@drawable/ristorante_immagine" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ristorante_immagine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Ristoranti"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:fontFamily="cursive"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/categoriaButton2"
@@ -77,11 +104,34 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/categoriaButton5"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1" >
+<!-- TODO: aggiustare immagini che diventano più grandi -->
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pub_immagine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Ristoranti"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:fontFamily="cursive"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/categoriaButton6"
