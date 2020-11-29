@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "694244365769",
+    "firebase_url": "https://yournight-75d3b.firebaseio.com",
+    "project_id": "yournight-75d3b",
+    "storage_bucket": "yournight-75d3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694244365769:android:838e17a38419b67eee8418",
+        "android_client_info": {
+          "package_name": "com.example.yournight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694244365769-1ssjngtka44f1m2gqmnq6ca5a7d0agrc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yournight",
+            "certificate_hash": "1e2df9016e659894e6809d21a34fac4681ce4403"
+          }
+        },
+        {
+          "client_id": "694244365769-5m9s870hho3sgq54n31k09io6qmabp61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX-5UW2Da5L0BDBxGjWuXj7uM5T_bA-30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694244365769-5m9s870hho3sgq54n31k09io6qmabp61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
